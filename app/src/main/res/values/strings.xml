@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">Blinker-Pause</string>
+
+    
+    <string name="activity_title">Blinker mit Pause</string>
+
+    <string name="textview_label">Blinkender Blinker</string>
+
+    <string name="button_label">Öffne zweite Activity</string>
+
+    <string name="activity_zwei_text">Klicken Sie den Zurück-Button, um zur Haupt-Activity zurückzukehren.</string>
+    
+</resources>

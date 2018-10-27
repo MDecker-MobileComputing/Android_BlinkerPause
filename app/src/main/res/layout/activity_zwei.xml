@@ -1,0 +1,18 @@
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context="de.mide.blinkerpause.ZweiteActivity" >
+    
+
+	<TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="35sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/activity_zwei_text" />
+
+</RelativeLayout>
