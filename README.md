@@ -1,6 +1,7 @@
 # Android-App "Blinker-Pause"
 
-App demonstrates possibilities for [Toast](https://developer.android.com/guide/topics/ui/notifiers/toasts#java) objects in Android.
+App demonstrates how to use lifecycle methods of class [Activity](https://developer.android.com/reference/android/app/Activity) to stop a thread while the
+activity instance is not visible.
 
 <br>
 
