@@ -17,21 +17,23 @@ import android.widget.TextView;
  */
 public class MainActivity extends Activity {
 
-    /** Tag für Log-Messages der ganzen App. */
+    /** Tag für Log-Messages dieser Activity. */
     public static final String TAG4LOGGING = "BlinkerPause";
 
 
-    /** Hintergrund-Farbe dieses TextViews wird durch Thread regelmäßig zwischen zwei
-     *  Farben gewechselt, so dass "Blink-Effekt" entsteht. */
+    /**
+     * UI-Element, dessen Hintergrund-Farbe durch einen Thread
+     * ständig geändert wird, so dass ein Blink-Effekt entsteht.
+     */
     protected TextView _blinkendesTextview = null;
 
-    /** Thread-Instanz, die für den "Blink-Effekt" verantwortlich ist. */
+    /** Thread-Instanz, die den "Blink-Effekt" des TextView-Elements erzeugt. */
     protected BlinkerThread _blinkerThread = null;
 
 
     /**
-     * Lifecycle-Methode: Layout-Datei laden und Referenz auf
-     * blinkendes TextView-Element holen.
+     * Lifecycle-Methode:
+     * Layout-Datei laden und Referenz auf blinkendes TextView-Element holen.
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +45,9 @@ public class MainActivity extends Activity {
 
 
     /**
-     * Lifecycle-Methode zum Starten des Blinkers.
+     * Lifecycle-Methode der Activity für Übergang von Zustand
+     * "unsichtbar" nach "sichtbar"; es wird eine Instanz von
+     * {@link BlinkerThread} erzeugt und gestartet.
      */
     @Override
     protected void onStart() {
@@ -56,7 +60,9 @@ public class MainActivity extends Activity {
 
 
     /**
-     * Lifecycle-Methode zum Beenden des Blinkers.
+     * Lifecycle-Methode der Activity für Übergang von Zustand
+     * "sichtbar" nach "unsichtbar"; die Instanz von
+     * {@link BlinkerThread} wird beendet.
      */
     @Override
     protected void onStop() {
@@ -84,6 +90,10 @@ public class MainActivity extends Activity {
     /* *************************** */
     /* *** Start innere Klasse *** */
     /* *************************** */
+
+    /**
+     * Innere Thread-Klasse für den Blinker-Effekt.
+     */
     protected class BlinkerThread extends Thread {
 
         /** Anhand dieser Member-Variable erkennt der Thread, dass er sich beenden soll. */
