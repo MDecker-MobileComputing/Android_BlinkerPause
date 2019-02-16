@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+
 /**
  * App demonstriert wie unter Verwendung geeigneter Lifecycle-Methoden ein
  * Thread pausiert werden kann, solange die zugehörige Activity-Instanz
@@ -37,6 +38,7 @@ public class MainActivity extends Activity {
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -51,6 +53,7 @@ public class MainActivity extends Activity {
      */
     @Override
     protected void onStart() {
+
         super.onStart();
 
         _blinkerThread = new BlinkerThread();
@@ -105,6 +108,7 @@ public class MainActivity extends Activity {
          * der nächsten Iteration sich beenden soll.
          */
         public void beenden() {
+
             __beenden = true;
         }
 

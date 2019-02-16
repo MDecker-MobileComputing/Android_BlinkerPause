@@ -16,6 +16,9 @@ Identifiers (names for classes, variables and methods), (JavaDoc) comments and U
 
 <br>
 
+The screenshots were taken from the app running in the Android SDK's emulator.
+
+<br>
 
 ----
 # License

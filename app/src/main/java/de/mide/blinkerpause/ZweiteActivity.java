@@ -7,7 +7,7 @@ import android.os.Bundle;
 /**
  * Zweite Activity in der App, um die {@link MainActivity}
  * zu überdecken; auch dann sollte der Blinker pausieren.
- * <br><br/>
+ * <br><br>
  * 
  * This project is licensed under the terms of the BSD 3-Clause License.
  */
@@ -18,6 +18,7 @@ public class ZweiteActivity extends Activity {
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_zwei);
