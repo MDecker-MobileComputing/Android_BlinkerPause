@@ -43,37 +43,9 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         _blinkendesTextview = findViewById(R.id.textview_blinkend);
-    }
-
-
-    /**
-     * Lifecycle-Methode der Activity für Übergang von Zustand
-     * "unsichtbar" nach "sichtbar"; es wird eine Instanz von
-     * {@link BlinkerThread} erzeugt und gestartet.
-     */
-    @Override
-    protected void onStart() {
-
-        super.onStart();
 
         _blinkerThread = new BlinkerThread();
         _blinkerThread.start();
-        Log.i(TAG4LOGGING, "Blinker-Thread wurde gestartet.");
-    }
-
-
-    /**
-     * Lifecycle-Methode der Activity für Übergang von Zustand
-     * "sichtbar" nach "unsichtbar"; die Instanz von
-     * {@link BlinkerThread} wird beendet.
-     */
-    @Override
-    protected void onStop() {
-
-        _blinkerThread.beenden();
-        Log.i(TAG4LOGGING, "Blinker-Thread wurde gestoppt.");
-
-        super.onStop();
     }
 
 
@@ -99,19 +71,6 @@ public class MainActivity extends Activity {
      */
     protected class BlinkerThread extends Thread {
 
-        /** Anhand dieser Member-Variable erkennt der Thread, dass er sich beenden soll. */
-        protected boolean  __beenden = false;
-
-
-        /**
-         * Setzt ein Thread-internes Flag, damit der Thread Bescheid weiß, dass er nach
-         * der nächsten Iteration sich beenden soll.
-         */
-        public void beenden() {
-
-            __beenden = true;
-        }
-
 
         /**
          * Der Inhalt dieser Methode wird von einem Hintergrund-Thread (Worker-Thread)
@@ -124,10 +83,6 @@ public class MainActivity extends Activity {
 
             while(true) { // Endlos-Schleife
 
-                if (__beenden == true) {
-
-                    break;
-                }
 
                 // Farbe in Abhängigkeit davon, ob Wert in "zaehler" gerade oder ungerade ist, setzen.
                 if (++zaehler % 2 == 0) {
@@ -145,6 +100,7 @@ public class MainActivity extends Activity {
                     _blinkendesTextview.post(new Runnable() {
                         @Override
                         public void run() {
+
                             _blinkendesTextview.setBackgroundColor( 0xFFD0D0D0 ); // Grauton
                         }
                     });
@@ -157,6 +113,7 @@ public class MainActivity extends Activity {
                     Thread.sleep(1000); // Eine Sekunde warten, ohne dabei CPU-Zeit zu verschwenden
                 }
                 catch (InterruptedException ex) {
+
                     Log.e(TAG4LOGGING, "Exception während Warten aufgetreten: " + ex);
                 }
 
