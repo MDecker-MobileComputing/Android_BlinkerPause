@@ -1,4 +1,6 @@
-# Android-App "Blinker-Pause"
+# Android-App "Blinker-Pause" #
+
+<br>
 
 App demonstrates how to use lifecycle methods of class [Activity](https://developer.android.com/reference/android/app/Activity) to stop a thread while the
 activity instance is not visible.
@@ -10,17 +12,22 @@ Identifiers (names for classes, variables and methods), (JavaDoc) comments and U
 <br>
 
 ----
-## Screenshots
 
-![Screenshot 1](screenshot_1.png)  ![Screenshot 2](screenshot_2.png)
+## Screenshots ##
 
 <br>
 
-The screenshots were taken from the app running in the Android SDK's emulator.
+![Screenshot 1](screenshot_1.png) &nbsp; ![Screenshot 2](screenshot_2.png)
+
 
 <br>
 
 ----
-# License
+
+## License ##
+
+<br>
 
 See the [LICENSE file](LICENSE.md) for license rights and limitations (BSD 3-Clause License).
+
+<br>
