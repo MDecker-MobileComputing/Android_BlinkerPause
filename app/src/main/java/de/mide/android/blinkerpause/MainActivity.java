@@ -71,7 +71,6 @@ public class MainActivity extends Activity {
      */
     protected class BlinkerThread extends Thread {
 
-
         /**
          * Der Inhalt dieser Methode wird von einem Hintergrund-Thread (Worker-Thread)
          * ausgeführt; hier ist das "Blinken" implementiert.
@@ -82,7 +81,6 @@ public class MainActivity extends Activity {
             int zaehler = 0;
 
             while(true) { // Endlos-Schleife
-
 
                 // Farbe in Abhängigkeit davon, ob Wert in "zaehler" gerade oder ungerade ist, setzen.
                 if (++zaehler % 2 == 0) {
@@ -106,7 +104,6 @@ public class MainActivity extends Activity {
                     });
                     Log.i(TAG4LOGGING, "Blinker: AUS (" + zaehler + ")");
                 }
-
 
                 try {
 

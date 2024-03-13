@@ -5,8 +5,8 @@ import android.os.Bundle;
 
 
 /**
- * Zweite Activity in der App, um die {@link MainActivity}
- * zu überdecken; auch dann sollte der Blinker pausieren.
+ * Zweite Activity in der App, um die {@link MainActivity} zu überdecken;
+ * auch dann sollte der Blinker auf der überdeckten Activity pausieren.
  * <br><br>
  *
  * This project is licensed under the terms of the BSD 3-Clause License.
