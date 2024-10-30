@@ -80,10 +80,11 @@ public class MainActivity extends Activity {
 
             int zaehler = 0;
 
-            while(true) { // Endlos-Schleife
+            while( true ) { // Endlos-Schleife
 
                 // Farbe in Abhängigkeit davon, ob Wert in "zaehler" gerade oder ungerade ist, setzen.
-                if (++zaehler % 2 == 0) {
+                zaehler++;
+                if (zaehler % 2 == 0) {
 
                     _blinkendesTextview.post(new Runnable() {
                         @Override
