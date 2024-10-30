@@ -89,6 +89,7 @@ public class MainActivity extends Activity {
                     _blinkendesTextview.post(new Runnable() {
                         @Override
                         public void run() {
+
                             _blinkendesTextview.setBackgroundColor( 0xFFFFFF00 ); // Gelb mit voller Deck-Kraft
                         }
                     });
@@ -108,7 +109,7 @@ public class MainActivity extends Activity {
 
                 try {
 
-                    Thread.sleep(1000); // Eine Sekunde warten, ohne dabei CPU-Zeit zu verschwenden
+                    Thread.sleep(1_000); // Eine Sekunde warten, ohne dabei CPU-Zeit zu verschwenden
                 }
                 catch (InterruptedException ex) {
 
