@@ -13,6 +13,7 @@ import android.os.Bundle;
  */
 public class ZweiteActivity extends Activity {
 
+
     /**
      * Lifecycle-Methode, lädt Layout-Datei.
      */
