@@ -37,12 +37,12 @@ public class MainActivity extends Activity {
      * Layout-Datei laden und Referenz auf blinkendes TextView-Element holen.
      */
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate( Bundle savedInstanceState ) {
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        super.onCreate( savedInstanceState );
+        setContentView( R.layout.activity_main );
 
-        _blinkendesTextview = findViewById(R.id.textview_blinkend);
+        _blinkendesTextview = findViewById( R.id.textview_blinkend );
 
         _blinkerThread = new BlinkerThread();
         _blinkerThread.start();
@@ -55,10 +55,10 @@ public class MainActivity extends Activity {
      *
      * @param view  Button-Objekt, auf das geklickt wurde
      */
-    public void onKlickAufButton(View view) {
+    public void onKlickAufButton( View view ) {
 
-        Intent intent = new Intent(this, ZweiteActivity.class);
-        startActivity(intent);
+        Intent intent = new Intent( this, ZweiteActivity.class );
+        startActivity( intent );
     }
 
 
@@ -93,27 +93,27 @@ public class MainActivity extends Activity {
                             _blinkendesTextview.setBackgroundColor( 0xFFFFFF00 ); // Gelb mit voller Deck-Kraft
                         }
                     });
-                    Log.i(TAG4LOGGING, "Blinker: EIN (" + zaehler + ")");
+                    Log.i( TAG4LOGGING, "Blinker: EIN (" + zaehler + ")");
 
                 } else {
 
-                    _blinkendesTextview.post(new Runnable() {
+                    _blinkendesTextview.post( new Runnable() {
                         @Override
                         public void run() {
 
                             _blinkendesTextview.setBackgroundColor( 0xFFD0D0D0 ); // Grauton
                         }
                     });
-                    Log.i(TAG4LOGGING, "Blinker: AUS (" + zaehler + ")");
+                    Log.i( TAG4LOGGING, "Blinker: AUS (" + zaehler + ")" );
                 }
 
                 try {
 
-                    Thread.sleep(1_000); // Eine Sekunde warten, ohne dabei CPU-Zeit zu verschwenden
+                    Thread.sleep(1_000 ); // Eine Sekunde warten, ohne dabei CPU-Zeit zu verschwenden
                 }
-                catch (InterruptedException ex) {
+                catch ( InterruptedException ex ) {
 
-                    Log.e(TAG4LOGGING, "Exception während Warten aufgetreten: " + ex);
+                    Log.e( TAG4LOGGING, "Exception während Warten aufgetreten: " + ex );
                 }
 
             } // Endlos-Schleife

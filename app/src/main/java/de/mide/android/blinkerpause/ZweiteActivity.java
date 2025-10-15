@@ -18,11 +18,11 @@ public class ZweiteActivity extends Activity {
      * Lifecycle-Methode, lädt Layout-Datei.
      */
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate( Bundle savedInstanceState ) {
 
-        super.onCreate(savedInstanceState);
+        super.onCreate( savedInstanceState );
 
-        setContentView(R.layout.activity_zwei);
+        setContentView( R.layout.activity_zwei );
     }
 
 }
