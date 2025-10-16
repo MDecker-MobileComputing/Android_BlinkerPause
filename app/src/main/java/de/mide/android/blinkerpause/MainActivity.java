@@ -84,9 +84,9 @@ public class MainActivity extends Activity {
 
                 // Farbe in Abhängigkeit davon, ob Wert in "zaehler" gerade oder ungerade ist, setzen.
                 zaehler++;
-                if (zaehler % 2 == 0) {
+                if ( zaehler % 2 == 0 ) {
 
-                    _blinkendesTextview.post(new Runnable() {
+                    _blinkendesTextview.post( new Runnable() {
                         @Override
                         public void run() {
 
@@ -109,7 +109,7 @@ public class MainActivity extends Activity {
 
                 try {
 
-                    Thread.sleep(1_000 ); // Eine Sekunde warten, ohne dabei CPU-Zeit zu verschwenden
+                    Thread.sleep( 1_000 ); // Eine Sekunde warten, ohne dabei CPU-Zeit zu verschwenden
                 }
                 catch ( InterruptedException ex ) {
 
